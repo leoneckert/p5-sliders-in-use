@@ -1,4 +1,4 @@
-function SimpleSlider(xPos, yPos, w_) {
+function SimpleSlider(xPos, yPos, w_, strokeC_, fillC_) {
   this.pos = createVector(xPos, yPos);
   this.sliderX;
   this.sliderHeight = 50;
@@ -6,6 +6,9 @@ function SimpleSlider(xPos, yPos, w_) {
   this.selected = false;
   this.value = 0;
   this.w = w_;
+  
+  this.strokeC = strokeC_;
+  this.fillC = fillC_;
 
   this.update = function() {
     this.sliderX = this.pos.x + map(this.value, 0, 255, 0, this.w);
@@ -38,6 +41,8 @@ function SimpleSlider(xPos, yPos, w_) {
     stroke(0);
     this.update();
     
+    stroke(this.strokeC);
+    fill(this.fillC);
     //baseline
     line(this.pos.x, this.pos.y, this.pos.x + this.w, this.pos.y);
 

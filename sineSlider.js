@@ -1,4 +1,4 @@
-function SineSlider(xpos_, ypos_, w_, intensity_, frequency_) {
+function SineSlider(xpos_, ypos_, w_, intensity_, frequency_, strokeC_, fillC_) {
   this.position = createVector(xpos_, ypos_);
   this.w = w_;
 
@@ -14,12 +14,16 @@ function SineSlider(xpos_, ypos_, w_, intensity_, frequency_) {
   this.value = 0;
   
   this.selected = false;
-  
+  this.strokeC = strokeC_;
+  this.fillC = fillC_;
+
   
   this.display = function() {
     //update slider position
     this.update();
     
+    stroke(this.strokeC);
+    fill(this.fillC);
     
     // baseline
     this.drawBaseline();
