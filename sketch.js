@@ -28,6 +28,11 @@ function setup() {
 }
 
 function draw() {
+  
+  print(sineS.value + sineS2.value + simpleS.value);
+  
+ 
+  
   background(255 - sineS.value, 255 - sineS2.value, 255 - simpleS.value);
   sineS2.intensity = map(simpleS2.value, 1.275, 255, 0, 300);
   print(simpleS3.value);
@@ -42,8 +47,38 @@ function draw() {
   simpleS3.display();
 
   background(0, 255 - simpleS4.value);
-  simpleS4.strokeC = 255 - simpleS4.value;
+  //simpleS4.strokeC = 255 - simpleS4.value;
 
   simpleS4.display();
+  
+  
+   if(sineS.value + sineS2.value + simpleS.value > 670){
+    sineS.strokeC = 255;
+    sineS.fillC = 255;
+    sineS2.strokeC = 255;
+    sineS2.fillC = 255;
+    simpleS.strokeC = 255;
+    simpleS.fillC = 255;
+    simpleS2.strokeC = 255;
+    simpleS2.fillC = 255;
+    simpleS3.strokeC = 255;
+    simpleS3.fillC = 255;
+    simpleS4.strokeC = 255;
+    simpleS4.fillC = 0;
+  }else{
+    sineS.strokeC = 0;
+    sineS.fillC = 0;
+    sineS2.strokeC = 0;
+    sineS2.fillC = 0;
+    simpleS.strokeC = 0;
+    simpleS.fillC = 0;
+    simpleS2.strokeC = 0;
+    simpleS2.fillC = 0;
+    simpleS3.strokeC = 0;
+    simpleS3.fillC = 0;
+    
+    simpleS4.fillC = 255;
+    simpleS4.strokeC = 255 - simpleS4.value;
+  }
 
 }

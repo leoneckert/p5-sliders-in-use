@@ -66,7 +66,7 @@ function SineSlider(xpos_, ypos_, w_, intensity_, frequency_, strokeC_, fillC_) 
 
       var p = this.position.y + (sin(i * this.frequency) * this.intensity);
       strokeWeight(1);
-      stroke(0);
+      stroke(this.strokeC);
       if (i > 0) {
         line(i + this.position.x, p, i + this.position.x - 1, this.previousY);
       }
