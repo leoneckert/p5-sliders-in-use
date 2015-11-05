@@ -21,7 +21,7 @@ function SimpleSlider(xPos, yPos, w_, strokeC_, fillC_) {
       this.selected = false;
     }
     
-    if(this.selected && mouseIsPressed && mouseX > this.pos.x && mouseX < this.pos.x + this.w){
+    if(this.selected){
       this.changeValue();
     }
 

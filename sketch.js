@@ -1,3 +1,5 @@
+//trying out how to branch project with Kat, yeah!
+
 var sineS;
 
 var sineS2;
@@ -27,15 +29,15 @@ function setup() {
 
 }
 
+
+
 function draw() {
   
-  print(sineS.value + sineS2.value + simpleS.value);
-  
+
  
   
   background(255 - sineS.value, 255 - sineS2.value, 255 - simpleS.value);
-  sineS2.intensity = map(simpleS2.value, 1.275, 255, 0, 300);
-  print(simpleS3.value);
+  sineS2.intensity = map(simpleS2.value,0, 255, 0, 300);
   sineS.frequency = map(simpleS3.value, 0, 255, 0.03, 0.09);
 
   sineS.display();
